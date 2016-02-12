@@ -12,17 +12,23 @@ class Place
 
 		function setCity($city)
 		{
-			$this->city = (string) $city;
+				$this->city = (string) $city;
 		}
 
 		function getCity()
 		{
-			return $this->city;
+				return $this->city;
 		}
 
 		function save()
 		{
-			array_push($_SESSION['list_of_places'], $this);
+				array_push($_SESSION['list_of_places'], $this);
+		}
+
+		static function getAll()
+		{
+				return $_SESSION['list_of_places'];
 		}
 	
 }
+?>
